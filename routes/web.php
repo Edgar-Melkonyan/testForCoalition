@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/','ProductController@index');
+
+Route::post('/store_product' , 'ProductController@storeProduct');
+
+Route::get('/get_json' , 'ProductController@getJsonData');

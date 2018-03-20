@@ -16,7 +16,7 @@ class ProductController extends Controller
             $file = \Storage::disk('local')->get('product.json');
             $json = json_decode($file, true);
         } else {
-            $json = ['products' => []];
+            $json = ['products' => [], 'sum' => ''];
         }
         $this->jsnonFile = $json;
     }
